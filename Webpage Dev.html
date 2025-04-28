@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume and Project Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0px 0px 10px 0px #aaa;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="text"], input[type="email"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Candidate Upload Form</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="reference">Reference (Company/Employee Name):</label>
+        <input type="text" name="reference" id="reference" required>
+
+        <label for="resume">Upload Resume (PDF/DOC):</label>
+        <input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx" required>
+
+        <label for="project">Upload Project Files (ZIP/RAR):</label>
+        <input type="file" name="project" id="project" accept=".zip, .rar">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
